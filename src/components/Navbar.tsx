@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { Menu, X } from 'lucide-react';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -60,6 +62,45 @@ export default function Navbar() {
           </Link>
         </li>
       </ul>
+
+      <button
+        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        className="hidden max-lg:flex items-center justify-center w-10 h-10 text-white hover:text-[#C9A961] transition-colors"
+        aria-label="Toggle menu"
+      >
+        {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+      </button>
+
+      {mobileMenuOpen && (
+        <div className="fixed top-[68px] left-0 w-full bg-[rgba(26,26,26,0.98)] backdrop-blur-md border-b border-[rgba(201,169,97,0.15)] shadow-[0_4px_30px_rgba(0,0,0,0.3)] lg:hidden">
+          <ul className="flex flex-col py-4 px-[60px] gap-4 list-none">
+            {navLinks.map((link) => (
+              <li key={link.path}>
+                <Link
+                  to={link.path}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`font-[600] text-[15px] no-underline tracking-[0.5px] transition-colors duration-300 block py-2 ${
+                    location.pathname === link.path
+                      ? 'text-[#C9A961]'
+                      : 'text-[rgba(255,255,255,0.75)] hover:text-white'
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              </li>
+            ))}
+            <li>
+              <Link
+                to="/kingdom-builders#unirse"
+                onClick={() => setMobileMenuOpen(false)}
+                className="font-[700] text-[13px] text-white gold-gradient px-6 py-2.5 rounded no-underline tracking-[0.5px] transition-all duration-300 inline-block mt-2"
+              >
+                UNIRSE
+              </Link>
+            </li>
+          </ul>
+        </div>
+      )}
     </nav>
   );
 }
