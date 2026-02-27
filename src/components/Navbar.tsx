@@ -28,23 +28,12 @@ export default function Navbar() {
           : 'h-[80px] bg-[rgba(26,26,26,0.95)]'
       } border-b border-[rgba(201,169,97,0.15)]`}
     >
-      <Link to="/" className="flex items-center gap-[14px] no-underline">
-        <div className="w-10 h-10 flex items-center justify-center">
-          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-9 h-9">
-            <rect x="4" y="14" width="8" height="22" fill="#C9A961" rx="1"/>
-            <rect x="16" y="6" width="8" height="30" fill="#FFFFFF" rx="1"/>
-            <rect x="28" y="14" width="8" height="22" fill="#C9A961" rx="1"/>
-            <polygon points="20,2 8,12 32,12" fill="none" stroke="#C9A961" strokeWidth="1.5"/>
-          </svg>
-        </div>
-        <div>
-          <div className="font-[800] text-[18px] text-white tracking-[2px] leading-[1.1]">
-            KINGDOM<br/>BUILDERS
-          </div>
-          <span className="block font-[600] text-[11px] tracking-[3px] gold-gradient-text opacity-90">
-            Construye lo que permanece
-          </span>
-        </div>
+      <Link to="/" className="flex items-center no-underline">
+        <img
+          src="/GEORGES_SEFAIR.png"
+          alt="Kingdom Builders"
+          className="h-[50px] w-auto object-contain transition-all duration-300"
+        />
       </Link>
 
       <ul className="flex items-center gap-9 list-none max-lg:hidden">
