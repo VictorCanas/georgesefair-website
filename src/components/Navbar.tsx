@@ -32,7 +32,7 @@ export default function Navbar() {
         <img
           src="/GEORGES_SEFAIR.png"
           alt="Kingdom Builders"
-          className="h-[50px] w-auto object-contain transition-all duration-300"
+          className="h-[100px] w-auto object-contain transition-all duration-300"
         />
       </Link>
 
