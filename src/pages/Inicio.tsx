@@ -27,45 +27,81 @@ function Hero() {
         className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-[120px] opacity-40"
         style={{ animation: 'lineGrow 2s ease-out 0.5s both', background: 'linear-gradient(to bottom, transparent, #e0ba4b)' }}
       />
-      <div className="relative z-[2] text-center max-w-[900px] px-10 mt-10">
-        <div
-          className="inline-flex items-center gap-2 font-[600] text-[11px] tracking-[4px] gold-gradient-text uppercase mb-10 opacity-0"
-          style={{ animation: 'fadeUp 0.8s ease-out 0.8s both' }}
-        >
-          <span className="w-[30px] h-px gold-gradient opacity-50" />
-          Dr. George Sefair
-          <span className="w-[30px] h-px gold-gradient opacity-50" />
-        </div>
-        <h1
-          className="font-[900] text-[clamp(48px,7vw,82px)] text-white leading-[1.05] mb-6 opacity-0"
-          style={{ animation: 'fadeUp 0.8s ease-out 1s both' }}
-        >
-          Construye lo que <span className="gold-gradient-text">permanece.</span>
-        </h1>
-        <p
-          className="text-[clamp(18px,2vw,24px)] text-[rgba(255,255,255,0.75)] leading-[1.6] max-w-[660px] mx-auto mb-12 opacity-0"
-          style={{ animation: 'fadeUp 0.8s ease-out 1.3s both' }}
-        >
-          Identidad renovada. Estrategia clara. Prosperidad alineada.
-        </p>
-        <div
-          className="flex gap-5 justify-center flex-wrap opacity-0"
-          style={{ animation: 'fadeUp 0.8s ease-out 1.5s both' }}
-        >
-          <Link
-            to="/kingdom-builders"
-            className="font-[700] text-[15px] tracking-[1px] text-white gold-gradient px-12 py-4 border-none rounded no-underline transition-all duration-300 hover:scale-105 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(224,186,75,0.5)]"
-          >
-            Unirse a la Comunidad
-          </Link>
-          <Link
-            to="/dr-george"
-            className="font-[600] text-[15px] tracking-[1px] text-white bg-transparent px-12 py-4 border-[1.5px] border-[rgba(224,186,75,0.3)] rounded no-underline transition-all duration-300 hover:border-[#e0ba4b] hover:gold-gradient-text hover:bg-[rgba(224,186,75,0.05)]"
-          >
-            Conoce su Historia
-          </Link>
+
+      <div className="relative z-[2] w-full max-w-[1400px] px-10 py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          {/* Text Content - Left Side */}
+          <div className="text-left max-lg:text-center">
+            <div
+              className="inline-flex items-center gap-2 font-[600] text-[11px] tracking-[4px] gold-gradient-text uppercase mb-10 opacity-0"
+              style={{ animation: 'fadeUp 0.8s ease-out 0.8s both' }}
+            >
+              <span className="w-[30px] h-px gold-gradient opacity-50" />
+              Dr. George Sefair
+              <span className="w-[30px] h-px gold-gradient opacity-50" />
+            </div>
+            <h1
+              className="font-[900] text-[clamp(48px,7vw,72px)] text-white leading-[1.05] mb-6 opacity-0"
+              style={{ animation: 'fadeUp 0.8s ease-out 1s both' }}
+            >
+              Construye lo que <span className="gold-gradient-text">permanece.</span>
+            </h1>
+            <p
+              className="text-[clamp(18px,2vw,22px)] text-[rgba(255,255,255,0.75)] leading-[1.6] mb-12 opacity-0"
+              style={{ animation: 'fadeUp 0.8s ease-out 1.3s both' }}
+            >
+              Identidad renovada. Estrategia clara. Prosperidad alineada.
+            </p>
+            <div
+              className="flex gap-5 flex-wrap opacity-0 max-lg:justify-center"
+              style={{ animation: 'fadeUp 0.8s ease-out 1.5s both' }}
+            >
+              <Link
+                to="/kingdom-builders"
+                className="font-[700] text-[15px] tracking-[1px] text-white gold-gradient px-12 py-4 border-none rounded no-underline transition-all duration-300 hover:scale-105 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(224,186,75,0.5)]"
+              >
+                Unirse a la Comunidad
+              </Link>
+              <Link
+                to="/dr-george"
+                className="font-[600] text-[15px] tracking-[1px] text-white bg-transparent px-12 py-4 border-[1.5px] border-[rgba(224,186,75,0.3)] rounded no-underline transition-all duration-300 hover:border-[#e0ba4b] hover:gold-gradient-text hover:bg-[rgba(224,186,75,0.05)]"
+              >
+                Conoce su Historia
+              </Link>
+            </div>
+          </div>
+
+          {/* Image - Right Side */}
+          <div className="relative opacity-0" style={{ animation: 'fadeUp 0.8s ease-out 1.2s both' }}>
+            {/* Golden decorative corner elements */}
+            <div className="absolute -top-4 -left-4 w-16 h-16 border-t-2 border-l-2 border-[#C9A961]" />
+            <div className="absolute -top-4 -right-4 w-16 h-16 border-t-2 border-r-2 border-[#C9A961]" />
+            <div className="absolute -bottom-4 -left-4 w-16 h-16 border-b-2 border-l-2 border-[#C9A961]" />
+            <div className="absolute -bottom-4 -right-4 w-16 h-16 border-b-2 border-r-2 border-[#C9A961]" />
+
+            {/* Golden frame */}
+            <div className="relative p-2 bg-gradient-to-br from-[#C9A961] via-[#E0BA4B] to-[#8B7355] rounded-lg shadow-[0_0_40px_rgba(201,169,97,0.3)]">
+              <div className="relative overflow-hidden rounded-md">
+                {/* Image with black and white filter and gradient blend */}
+                <img
+                  src="/_AFV3530.JPG"
+                  alt="Dr. George Sefair"
+                  className="w-full h-auto object-cover grayscale"
+                  style={{
+                    maskImage: 'linear-gradient(to left, rgba(0,0,0,0.4) 0%, rgba(0,0,0,1) 30%)',
+                    WebkitMaskImage: 'linear-gradient(to left, rgba(0,0,0,0.4) 0%, rgba(0,0,0,1) 30%)'
+                  }}
+                />
+                {/* Overlay gradient to blend with background */}
+                <div className="absolute inset-0 bg-gradient-to-l from-[#1a1a1a] via-transparent to-transparent opacity-60" />
+                {/* Subtle gold overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-[rgba(201,169,97,0.1)] to-transparent" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+
       <div
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-0"
         style={{ animation: 'fadeUp 0.8s ease-out 2s both' }}
