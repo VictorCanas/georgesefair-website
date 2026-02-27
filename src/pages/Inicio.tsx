@@ -72,12 +72,12 @@ function Hero() {
           </div>
 
           {/* Image - Right Side */}
-          <div className="relative opacity-0" style={{ animation: 'fadeUp 0.8s ease-out 1.2s both' }}>
+          <div className="relative opacity-0 max-w-[400px] mx-auto" style={{ animation: 'fadeUp 0.8s ease-out 1.2s both' }}>
             {/* Golden decorative corner elements */}
-            <div className="absolute -top-4 -left-4 w-16 h-16 border-t-2 border-l-2 border-[#C9A961]" />
-            <div className="absolute -top-4 -right-4 w-16 h-16 border-t-2 border-r-2 border-[#C9A961]" />
-            <div className="absolute -bottom-4 -left-4 w-16 h-16 border-b-2 border-l-2 border-[#C9A961]" />
-            <div className="absolute -bottom-4 -right-4 w-16 h-16 border-b-2 border-r-2 border-[#C9A961]" />
+            <div className="absolute -top-4 -left-4 w-12 h-12 border-t-2 border-l-2 border-[#C9A961]" />
+            <div className="absolute -top-4 -right-4 w-12 h-12 border-t-2 border-r-2 border-[#C9A961]" />
+            <div className="absolute -bottom-4 -left-4 w-12 h-12 border-b-2 border-l-2 border-[#C9A961]" />
+            <div className="absolute -bottom-4 -right-4 w-12 h-12 border-b-2 border-r-2 border-[#C9A961]" />
 
             {/* Golden frame */}
             <div className="relative p-2 bg-gradient-to-br from-[#C9A961] via-[#E0BA4B] to-[#8B7355] rounded-lg shadow-[0_0_40px_rgba(201,169,97,0.3)]">
