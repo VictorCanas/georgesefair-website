@@ -51,7 +51,7 @@ function Navbar({ scrolled }: { scrolled: boolean }) {
           <div className="font-[800] text-[18px] text-white tracking-[2px] leading-[1.1]">
             KINGDOM<br/>BUILDERS
           </div>
-          <span className="block font-[600] text-[11px] tracking-[3px] text-[#C9A961] opacity-90">
+          <span className="block font-[600] text-[11px] tracking-[3px] gold-gradient-text opacity-90">
             Construye lo que permanece
           </span>
         </div>
@@ -67,7 +67,7 @@ function Navbar({ scrolled }: { scrolled: boolean }) {
         <li>
           <a
             href="#"
-            className="font-[700] text-[13px] text-white bg-[#C9A961] px-6 py-2.5 rounded no-underline tracking-[0.5px] transition-all duration-300 hover:bg-[#D4AF37] hover:-translate-y-px hover:shadow-[0_4px_20px_rgba(201,169,97,0.4)]"
+            className="font-[700] text-[13px] text-white gold-gradient px-6 py-2.5 rounded no-underline tracking-[0.5px] transition-all duration-300 hover:scale-105 hover:-translate-y-px hover:shadow-[0_4px_20px_rgba(224,186,75,0.5)]"
           >
             Únete
           </a>
@@ -99,26 +99,26 @@ function Hero() {
         }}
       />
       <div
-        className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-[120px] bg-gradient-to-b from-transparent to-[#C9A961] opacity-40"
-        style={{ animation: 'lineGrow 2s ease-out 0.5s both' }}
+        className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-[120px] opacity-40"
+        style={{ animation: 'lineGrow 2s ease-out 0.5s both', background: 'linear-gradient(to bottom, transparent, #e0ba4b)' }}
       />
       <div className="relative z-[2] text-center max-w-[900px] px-10 mt-10">
         <div
-          className="inline-flex items-center gap-2 font-[600] text-[11px] tracking-[4px] text-[#C9A961] uppercase mb-10 opacity-0"
+          className="inline-flex items-center gap-2 font-[600] text-[11px] tracking-[4px] gold-gradient-text uppercase mb-10 opacity-0"
           style={{ animation: 'fadeUp 0.8s ease-out 0.8s both' }}
         >
-          <span className="w-[30px] h-px bg-[#C9A961] opacity-50" />
+          <span className="w-[30px] h-px gold-gradient opacity-50" />
           Dr. Georges Sefair
-          <span className="w-[30px] h-px bg-[#C9A961] opacity-50" />
+          <span className="w-[30px] h-px gold-gradient opacity-50" />
         </div>
         <h1
           className="font-[900] text-[clamp(42px,6vw,72px)] text-white leading-[1.05] mb-2.5 opacity-0"
           style={{ animation: 'fadeUp 0.8s ease-out 1s both' }}
         >
-          Transformando<br />Líderes <span className="text-[#C9A961]">Empresariales</span>
+          Transformando<br />Líderes <span className="gold-gradient-text">Empresariales</span>
         </h1>
         <p
-          className="font-[600] text-[clamp(18px,2.5vw,26px)] text-[#C9A961] mb-7 opacity-0"
+          className="font-[600] text-[clamp(18px,2.5vw,26px)] mb-7 opacity-0 gold-gradient-text"
           style={{ animation: 'fadeUp 0.8s ease-out 1.15s both' }}
         >
           El movimiento de fe y negocios de Iberoamérica
@@ -137,13 +137,13 @@ function Hero() {
         >
           <a
             href="#quienes-somos"
-            className="font-[700] text-[14px] tracking-[1px] text-white bg-[#C9A961] px-10 py-4 border-none rounded no-underline transition-all duration-300 hover:bg-[#D4AF37] hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(201,169,97,0.35)]"
+            className="font-[700] text-[14px] tracking-[1px] text-white gold-gradient px-10 py-4 border-none rounded no-underline transition-all duration-300 hover:scale-105 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(224,186,75,0.5)]"
           >
             Conoce el Movimiento
           </a>
           <a
             href="#comunidad"
-            className="font-[600] text-[14px] tracking-[1px] text-white bg-transparent px-10 py-4 border-[1.5px] border-[rgba(255,255,255,0.25)] rounded no-underline transition-all duration-300 hover:border-[#C9A961] hover:text-[#C9A961] hover:bg-[rgba(201,169,97,0.05)]"
+            className="font-[600] text-[14px] tracking-[1px] text-white bg-transparent px-10 py-4 border-[1.5px] border-[rgba(224,186,75,0.3)] rounded no-underline transition-all duration-300 hover:border-[#e0ba4b] hover:gold-gradient-text hover:bg-[rgba(224,186,75,0.05)]"
           >
             Únete a la Comunidad
           </a>
@@ -155,8 +155,8 @@ function Hero() {
       >
         <span className="text-[10px] tracking-[3px] text-[rgba(255,255,255,0.3)] uppercase">Descubre</span>
         <div
-          className="w-px h-10 bg-gradient-to-b from-[#C9A961] to-transparent"
-          style={{ animation: 'scrollPulse 2s ease-in-out infinite' }}
+          className="w-px h-10"
+          style={{ animation: 'scrollPulse 2s ease-in-out infinite', background: 'linear-gradient(to bottom, #e0ba4b, transparent)' }}
         />
       </div>
     </section>
@@ -168,7 +168,7 @@ function Intro() {
     <section className="py-[120px] px-[60px] bg-white relative" id="quienes-somos">
       <div className="max-w-[1100px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
         <div>
-          <p className="font-[700] text-[11px] tracking-[4px] text-[#C9A961] uppercase mb-5">Quiénes Somos</p>
+          <p className="font-[700] text-[11px] tracking-[4px] gold-gradient-text uppercase mb-5">Quiénes Somos</p>
           <h2 className="font-[800] text-[clamp(28px,3vw,40px)] text-[#1a1a1a] leading-[1.15] mb-6">
             Un movimiento que redefine el liderazgo empresarial bajo principios de fe
           </h2>
@@ -184,7 +184,7 @@ function Intro() {
           <div className="grid grid-cols-2 gap-4 mt-8">
             {['Fe', 'Excelencia', 'Abundancia', 'Integridad', 'Impacto', 'Legado', 'Generosidad', 'Sabiduría'].map((value) => (
               <div key={value} className="flex items-center gap-2.5 font-[600] text-[13px] text-[#1a1a1a]">
-                <span className="w-2 h-2 bg-[#C9A961] rounded-full flex-shrink-0" />
+                <span className="w-2 h-2 gold-gradient rounded-full flex-shrink-0" />
                 {value}
               </div>
             ))}
@@ -196,7 +196,7 @@ function Intro() {
               Foto Dr. Georges Sefair
             </span>
           </div>
-          <div className="absolute -bottom-5 -right-5 w-[200px] h-[200px] border-2 border-[#C9A961] rounded-lg opacity-20 -z-10" />
+          <div className="absolute -bottom-5 -right-5 w-[200px] h-[200px] border-2 border-[#e0ba4b] rounded-lg opacity-20 -z-10" />
         </div>
       </div>
     </section>
@@ -231,12 +231,12 @@ function Pillars() {
 
 function PillarCard({ name, spanish, phrase, icon: Icon }: any) {
   return (
-    <div className="bg-white rounded-lg p-10 pb-9 text-center relative transition-all duration-400 border border-[rgba(0,0,0,0.04)] before:content-[''] before:absolute before:top-0 before:left-1/2 before:-translate-x-1/2 before:w-10 before:h-[3px] before:bg-[#C9A961] before:rounded-b before:opacity-0 before:transition-all before:duration-400 hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)] hover:before:opacity-100 hover:before:w-[60px]">
+    <div className="bg-white rounded-lg p-10 pb-9 text-center relative transition-all duration-400 border border-[rgba(0,0,0,0.04)] before:content-[''] before:absolute before:top-0 before:left-1/2 before:-translate-x-1/2 before:w-10 before:h-[3px] before:gold-gradient before:rounded-b before:opacity-0 before:transition-all before:duration-400 hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)] hover:before:opacity-100 hover:before:w-[60px]">
       <div className="w-14 h-14 mx-auto mb-5 flex items-center justify-center">
-        <Icon className="w-10 h-10 stroke-[#C9A961]" strokeWidth={1.5} />
+        <Icon className="w-10 h-10 stroke-[#e0ba4b]" strokeWidth={1.5} />
       </div>
       <div className="font-[800] text-[13px] tracking-[2px] text-[#1a1a1a] uppercase mb-1.5">{name}</div>
-      <div className="font-[500] text-[12px] text-[#C9A961] mb-4">{spanish}</div>
+      <div className="font-[500] text-[12px] gold-gradient-text mb-4">{spanish}</div>
       <div className="text-[13px] leading-[1.6] text-[#666666] italic">{phrase}</div>
     </div>
   );
@@ -257,10 +257,10 @@ function Stats() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 text-center">
           {stats.map((stat) => (
             <div key={stat.label} className="p-5">
-              <div className="font-[900] text-[clamp(36px,4vw,52px)] text-[#C9A961] leading-none mb-2">
+              <div className="font-[900] text-[clamp(36px,4vw,52px)] gold-gradient-text leading-none mb-2">
                 {stat.number}
               </div>
-              <div className="w-[30px] h-px bg-[#C9A961] mx-auto my-3 opacity-40" />
+              <div className="w-[30px] h-px gold-gradient mx-auto my-3 opacity-40" />
               <div className="font-[600] text-[12px] tracking-[2px] text-[rgba(255,255,255,0.5)] uppercase">
                 {stat.label}
               </div>
@@ -316,7 +316,7 @@ function Programs() {
     <section className="py-[120px] px-[60px] bg-white" id="programas">
       <div className="max-w-[1100px] mx-auto">
         <div className="text-center mb-[60px]">
-          <p className="font-[700] text-[11px] tracking-[4px] text-[#C9A961] uppercase mb-5">Ecosistema de Transformación</p>
+          <p className="font-[700] text-[11px] tracking-[4px] gold-gradient-text uppercase mb-5">Ecosistema de Transformación</p>
           <h2 className="font-[800] text-[clamp(28px,3vw,40px)] text-[#1a1a1a] leading-[1.15]">Programas y Servicios</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
@@ -331,13 +331,13 @@ function Programs() {
 
 function ProgramCard({ tag, name, desc, link }: any) {
   return (
-    <div className="bg-white border border-[rgba(0,0,0,0.06)] rounded-lg p-10 px-8 transition-all duration-400 relative overflow-hidden after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[3px] after:bg-gradient-to-r after:from-[#C9A961] after:to-[#D4AF37] after:scale-x-0 after:origin-left after:transition-transform after:duration-400 hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(0,0,0,0.08)] hover:border-[rgba(201,169,97,0.2)] hover:after:scale-x-100">
-      <div className="font-[700] text-[10px] tracking-[2px] text-[#C9A961] uppercase mb-3.5">{tag}</div>
+    <div className="bg-white border border-[rgba(0,0,0,0.06)] rounded-lg p-10 px-8 transition-all duration-400 relative overflow-hidden after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[3px] after:gold-gradient after:scale-x-0 after:origin-left after:transition-transform after:duration-400 hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(0,0,0,0.08)] hover:border-[rgba(224,186,75,0.2)] hover:after:scale-x-100">
+      <div className="font-[700] text-[10px] tracking-[2px] gold-gradient-text uppercase mb-3.5">{tag}</div>
       <div className="font-[700] text-[20px] text-[#1a1a1a] mb-3 leading-[1.3]">{name}</div>
       <div className="text-[14px] leading-[1.7] text-[#666666] mb-6">{desc}</div>
       <a
         href="#"
-        className="font-[600] text-[13px] text-[#C9A961] no-underline inline-flex items-center gap-1.5 transition-[gap] duration-300 hover:gap-3"
+        className="font-[600] text-[13px] gold-gradient-text no-underline inline-flex items-center gap-1.5 transition-[gap] duration-300 hover:gap-3"
       >
         {link} →
       </a>
@@ -359,14 +359,14 @@ function Founder() {
     <section className="py-[120px] px-[60px] bg-[#F5F5F5]" id="fundador">
       <div className="max-w-[1100px] mx-auto grid grid-cols-1 lg:grid-cols-[400px_1fr] gap-20 items-center">
         <div className="relative">
-          <div className="w-full aspect-[3/4] bg-gradient-to-br from-[#E8DCC8] to-[#d4c5a8] rounded-lg flex items-center justify-center relative after:content-[''] after:absolute after:-top-4 after:-left-4 after:w-full after:h-full after:border-2 after:border-[#C9A961] after:rounded-lg after:opacity-[0.15] after:z-0">
+          <div className="w-full aspect-[3/4] bg-gradient-to-br from-[#E8DCC8] to-[#d4c5a8] rounded-lg flex items-center justify-center relative after:content-[''] after:absolute after:-top-4 after:-left-4 after:w-full after:h-full after:border-2 after:border-[#e0ba4b] after:rounded-lg after:opacity-[0.15] after:z-0">
             <span className="font-[600] text-[14px] text-[#8B7355] opacity-50">Dr. Georges Sefair</span>
           </div>
         </div>
         <div>
-          <p className="font-[700] text-[11px] tracking-[4px] text-[#C9A961] uppercase mb-5">Fundador</p>
+          <p className="font-[700] text-[11px] tracking-[4px] gold-gradient-text uppercase mb-5">Fundador</p>
           <h2 className="font-[800] text-[32px] text-[#1a1a1a] mb-1">Dr. Georges Sefair</h2>
-          <p className="font-[600] text-[14px] text-[#C9A961] tracking-[1px] mb-6">
+          <p className="font-[600] text-[14px] gold-gradient-text tracking-[1px] mb-6">
             Fundador y Líder del Movimiento Kingdom Builders
           </p>
           <p className="text-[16px] leading-[1.8] text-[#666666] mb-8">
@@ -378,14 +378,14 @@ function Founder() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
             {credentials.map((cred) => (
               <div key={cred} className="flex items-start gap-2.5 text-[14px] text-[#1a1a1a] leading-[1.5]">
-                <span className="text-[#C9A961] text-[10px] mt-1 flex-shrink-0">✦</span>
+                <span className="gold-gradient-text text-[10px] mt-1 flex-shrink-0">✦</span>
                 {cred}
               </div>
             ))}
           </div>
           <a
             href="#"
-            className="font-[700] text-[14px] tracking-[1px] text-white bg-[#C9A961] px-10 py-4 border-none rounded no-underline inline-block transition-all duration-300 hover:bg-[#D4AF37] hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(201,169,97,0.35)]"
+            className="font-[700] text-[14px] tracking-[1px] text-white gold-gradient px-10 py-4 border-none rounded no-underline inline-block transition-all duration-300 hover:scale-105 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(224,186,75,0.5)]"
           >
             Conoce su Historia
           </a>
@@ -421,7 +421,7 @@ function Testimonials() {
     <section className="py-[120px] px-[60px] bg-white" id="testimonios">
       <div className="max-w-[1100px] mx-auto">
         <div className="text-center mb-[60px]">
-          <p className="font-[700] text-[11px] tracking-[4px] text-[#C9A961] uppercase mb-5">Transformaciones Reales</p>
+          <p className="font-[700] text-[11px] tracking-[4px] gold-gradient-text uppercase mb-5">Transformaciones Reales</p>
           <h2 className="font-[800] text-[clamp(28px,3vw,40px)] text-[#1a1a1a] leading-[1.15]">Lo que dicen nuestros miembros</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
@@ -436,10 +436,10 @@ function Testimonials() {
 
 function TestimonialCard({ text, author, role, tag }: any) {
   return (
-    <div className="bg-[#F5F5F5] rounded-lg p-10 px-8 relative before:content-['\u201C'] before:font-[Poppins] before:text-[60px] before:text-[#C9A961] before:opacity-30 before:absolute before:top-4 before:left-7 before:leading-none">
+    <div className="bg-[#F5F5F5] rounded-lg p-10 px-8 relative before:content-['\u201C'] before:font-[Poppins] before:text-[60px] before:gold-gradient-text before:opacity-30 before:absolute before:top-4 before:left-7 before:leading-none">
       <p className="text-[15px] leading-[1.8] text-[#666666] italic mb-6 relative z-[1]">{text}</p>
       <div className="font-[700] text-[14px] text-[#1a1a1a]">{author}</div>
-      <div className="text-[12px] text-[#C9A961] mt-0.5">{role}</div>
+      <div className="text-[12px] gold-gradient-text mt-0.5">{role}</div>
       <div className="inline-block mt-3 font-[600] text-[10px] tracking-[1px] text-[#8B7355] bg-[rgba(139,115,85,0.08)] px-2.5 py-1 rounded-[3px] uppercase">
         {tag}
       </div>
@@ -470,7 +470,7 @@ function Events() {
     <section className="py-[120px] px-[60px] bg-[#F5F5F5]" id="eventos">
       <div className="max-w-[1100px] mx-auto">
         <div className="text-center mb-[60px]">
-          <p className="font-[700] text-[11px] tracking-[4px] text-[#C9A961] uppercase mb-5">Calendario 2026</p>
+          <p className="font-[700] text-[11px] tracking-[4px] gold-gradient-text uppercase mb-5">Calendario 2026</p>
           <h2 className="font-[800] text-[clamp(28px,3vw,40px)] text-[#1a1a1a] leading-[1.15]">Próximos Eventos</h2>
         </div>
         <div className="flex flex-col gap-5">
@@ -485,15 +485,15 @@ function Events() {
 
 function EventRow({ date, name, desc }: any) {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-[180px_1fr_auto] gap-10 items-center bg-white rounded-lg py-8 px-10 border border-[rgba(0,0,0,0.04)] transition-all duration-300 hover:translate-x-1.5 hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] hover:border-l-[3px] hover:border-l-[#C9A961]">
-      <div className="font-[800] text-[14px] text-[#C9A961] tracking-[1px]">{date}</div>
+    <div className="grid grid-cols-1 md:grid-cols-[180px_1fr_auto] gap-10 items-center bg-white rounded-lg py-8 px-10 border border-[rgba(0,0,0,0.04)] transition-all duration-300 hover:translate-x-1.5 hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] hover:border-l-[3px] hover:border-l-[#e0ba4b]">
+      <div className="font-[800] text-[14px] gold-gradient-text tracking-[1px]">{date}</div>
       <div>
         <div className="font-[700] text-[18px] text-[#1a1a1a] mb-1">{name}</div>
         <div className="text-[14px] text-[#666666]">{desc}</div>
       </div>
       <a
         href="#"
-        className="font-[600] text-[12px] tracking-[1px] text-[#C9A961] border-[1.5px] border-[#C9A961] py-2.5 px-6 rounded no-underline whitespace-nowrap transition-all duration-300 hover:bg-[#C9A961] hover:text-white"
+        className="font-[600] text-[12px] tracking-[1px] gold-gradient-text border-[1.5px] border-[#e0ba4b] py-2.5 px-6 rounded no-underline whitespace-nowrap transition-all duration-300 hover:gold-gradient hover:text-white"
       >
         Más Info
       </a>
@@ -507,7 +507,7 @@ function CTAFinal() {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center_bottom,rgba(201,169,97,0.08)_0%,transparent_60%)]" />
       <div className="relative z-[1] max-w-[700px] mx-auto">
         <h2 className="font-[900] text-[clamp(32px,4vw,48px)] text-white leading-[1.15] mb-5">
-          Construye lo que<br /><span className="text-[#C9A961]">permanece.</span>
+          Construye lo que<br /><span className="gold-gradient-text">permanece.</span>
         </h2>
         <p className="text-[17px] text-[rgba(255,255,255,0.5)] leading-[1.7] mb-11">
           Únete al movimiento que está transformando líderes empresariales en Iberoamérica.
@@ -515,7 +515,7 @@ function CTAFinal() {
         </p>
         <a
           href="#"
-          className="font-[700] text-[15px] tracking-[1px] text-white bg-[#C9A961] px-12 py-[18px] border-none rounded no-underline inline-block transition-all duration-300 hover:bg-[#D4AF37] hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(201,169,97,0.35)]"
+          className="font-[700] text-[15px] tracking-[1px] text-white gold-gradient px-12 py-[18px] border-none rounded no-underline inline-block transition-all duration-300 hover:scale-105 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(224,186,75,0.5)]"
         >
           Únete a Kingdom Builders
         </a>
@@ -539,7 +539,7 @@ function Footer() {
               <a
                 key={social}
                 href="#"
-                className="w-9 h-9 border border-[rgba(255,255,255,0.12)] rounded flex items-center justify-center text-[rgba(255,255,255,0.4)] no-underline text-[14px] transition-all duration-300 hover:border-[#C9A961] hover:text-[#C9A961]"
+                className="w-9 h-9 border border-[rgba(255,255,255,0.12)] rounded flex items-center justify-center text-[rgba(255,255,255,0.4)] no-underline text-[14px] transition-all duration-300 hover:border-[#e0ba4b] hover:gold-gradient-text"
               >
                 {social}
               </a>
@@ -547,21 +547,21 @@ function Footer() {
           </div>
         </div>
         <div>
-          <h4 className="font-[700] text-[12px] tracking-[2px] text-[#C9A961] uppercase mb-5">Navegación</h4>
+          <h4 className="font-[700] text-[12px] tracking-[2px] gold-gradient-text uppercase mb-5">Navegación</h4>
           <a href="#home" className="block text-[14px] text-[rgba(255,255,255,0.45)] no-underline mb-3 transition-colors duration-300 hover:text-white">Home</a>
           <a href="#quienes-somos" className="block text-[14px] text-[rgba(255,255,255,0.45)] no-underline mb-3 transition-colors duration-300 hover:text-white">Quiénes Somos</a>
           <a href="#programas" className="block text-[14px] text-[rgba(255,255,255,0.45)] no-underline mb-3 transition-colors duration-300 hover:text-white">Programas</a>
           <a href="#comunidad" className="block text-[14px] text-[rgba(255,255,255,0.45)] no-underline mb-3 transition-colors duration-300 hover:text-white">Comunidad</a>
         </div>
         <div>
-          <h4 className="font-[700] text-[12px] tracking-[2px] text-[#C9A961] uppercase mb-5">Recursos</h4>
+          <h4 className="font-[700] text-[12px] tracking-[2px] gold-gradient-text uppercase mb-5">Recursos</h4>
           <a href="#" className="block text-[14px] text-[rgba(255,255,255,0.45)] no-underline mb-3 transition-colors duration-300 hover:text-white">Blog</a>
           <a href="#" className="block text-[14px] text-[rgba(255,255,255,0.45)] no-underline mb-3 transition-colors duration-300 hover:text-white">Guías Gratuitas</a>
           <a href="#" className="block text-[14px] text-[rgba(255,255,255,0.45)] no-underline mb-3 transition-colors duration-300 hover:text-white">Podcast</a>
           <a href="#" className="block text-[14px] text-[rgba(255,255,255,0.45)] no-underline mb-3 transition-colors duration-300 hover:text-white">Libro</a>
         </div>
         <div>
-          <h4 className="font-[700] text-[12px] tracking-[2px] text-[#C9A961] uppercase mb-5">Contacto</h4>
+          <h4 className="font-[700] text-[12px] tracking-[2px] gold-gradient-text uppercase mb-5">Contacto</h4>
           <a href="#" className="block text-[14px] text-[rgba(255,255,255,0.45)] no-underline mb-3 transition-colors duration-300 hover:text-white">Agendar Llamada</a>
           <a href="#" className="block text-[14px] text-[rgba(255,255,255,0.45)] no-underline mb-3 transition-colors duration-300 hover:text-white">Partnerships</a>
           <a href="mailto:brand@kingdombuilders.com" className="block text-[14px] text-[rgba(255,255,255,0.45)] no-underline mb-3 transition-colors duration-300 hover:text-white">brand@kingdombuilders.com</a>
@@ -570,7 +570,7 @@ function Footer() {
       <div className="max-w-[1100px] mx-auto pt-7 border-t border-[rgba(255,255,255,0.06)] flex flex-col md:flex-row justify-between items-center gap-4">
         <p className="text-[12px] text-[rgba(255,255,255,0.25)]">© 2026 Kingdom Builders. Todos los derechos reservados.</p>
         <p className="font-[600] text-[11px] text-[rgba(255,255,255,0.2)] tracking-[1px]">
-          Diseño por <span className="text-[#C9A961] opacity-60">Multigle</span>
+          Diseño por <span className="gold-gradient-text opacity-60">Multigle</span>
         </p>
       </div>
     </footer>
