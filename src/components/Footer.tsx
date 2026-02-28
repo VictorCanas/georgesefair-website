@@ -43,11 +43,8 @@ export default function Footer() {
           <a href="mailto:brand@kingdombuilders.com" className="block text-[14px] text-[rgba(255,255,255,0.45)] no-underline mb-3 transition-colors duration-300 hover:text-white">brand@kingdombuilders.com</a>
         </div>
       </div>
-      <div className="max-w-[1100px] mx-auto pt-7 border-t border-[rgba(255,255,255,0.06)] flex flex-col md:flex-row justify-between items-center gap-4">
+      <div className="max-w-[1100px] mx-auto pt-7 border-t border-[rgba(255,255,255,0.06)] flex justify-center items-center">
         <p className="text-[12px] text-[rgba(255,255,255,0.25)]">© 2026 Kingdom Builders. Todos los derechos reservados.</p>
-        <p className="font-[600] text-[11px] text-[rgba(255,255,255,0.2)] tracking-[1px]">
-          Diseño por <span className="gold-gradient-text opacity-60">Multigle</span>
-        </p>
       </div>
     </footer>
   );
