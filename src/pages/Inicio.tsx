@@ -37,7 +37,7 @@ function Hero() {
               style={{ animation: 'fadeUp 0.8s ease-out 0.8s both' }}
             >
               <span className="w-[30px] h-px gold-gradient opacity-50" />
-              Dr. George Sefair
+              Dr. Georges
               <span className="w-[30px] h-px gold-gradient opacity-50" />
             </div>
             <h1
@@ -84,8 +84,8 @@ function Hero() {
               <div className="relative overflow-hidden rounded-md">
                 {/* Image with black and white filter and gradient blend */}
                 <img
-                  src="/_AFV3530.JPG"
-                  alt="Dr. George Sefair"
+                  src="/GEORGES_SEFAIR.png"
+                  alt="Dr. Georges"
                   className="w-full h-auto object-cover grayscale"
                   style={{
                     maskImage: 'linear-gradient(to left, rgba(0,0,0,0.4) 0%, rgba(0,0,0,1) 30%)',
@@ -271,7 +271,7 @@ function Testimonials() {
       tag: 'Identidad'
     },
     {
-      text: 'El coaching con el Dr. Sefair me ayudó a triplicar mis ingresos en 8 meses. Pero lo más importante fue recuperar la paz y la claridad sobre mi propósito como líder.',
+      text: 'El coaching con el Dr. Georges me ayudó a triplicar mis ingresos en 8 meses. Pero lo más importante fue recuperar la paz y la claridad sobre mi propósito como líder.',
       author: '[Nombre del Miembro]',
       role: 'CEO, México',
       tag: 'Prosperidad'

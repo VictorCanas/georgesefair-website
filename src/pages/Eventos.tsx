@@ -31,7 +31,7 @@ function EventosGrid() {
       nombre: 'Kingdom Builders Tour 2026',
       fecha: 'Marzo — Abril 2026',
       ubicaciones: ['Colombia', 'México', 'USA', 'España'],
-      descripcion: 'Eventos presenciales en 4 países de Iberoamérica y Estados Unidos. Experiencias de inmersión de un día completo con el Dr. George Sefair.',
+      descripcion: 'Eventos presenciales en 4 países de Iberoamérica y Estados Unidos. Experiencias de inmersión de un día completo con el Dr. Georges.',
       detalles: [
         'Sesiones magistrales sobre los 4 pilares',
         'Talleres prácticos de implementación',
@@ -46,11 +46,11 @@ function EventosGrid() {
       nombre: 'One Day Event',
       fecha: 'Octubre 15, 2026',
       ubicaciones: ['Miami, Florida'],
-      descripcion: 'Evento intensivo de un día. Transformación acelerada, networking de alto nivel y acceso directo al Dr. Sefair.',
+      descripcion: 'Evento intensivo de un día. Transformación acelerada, networking de alto nivel y acceso directo al Dr. Georges.',
       detalles: [
         'Sesión intensiva de 8 horas',
         'Ejercicios de transformación guiados',
-        'Cena VIP con el Dr. Sefair',
+        'Cena VIP con el Dr. Georges',
         'Materiales exclusivos',
         'Comunidad privada post-evento'
       ],
@@ -66,7 +66,7 @@ function EventosGrid() {
       detalles: [
         'Inmersión de 3 días y 2 noches',
         'Coaching grupal intensivo',
-        'Sesiones 1:1 con el Dr. Sefair',
+        'Sesiones 1:1 con el Dr. Georges',
         'Experiencias de team building',
         'Estrategia personalizada para tu negocio',
         'Red exclusiva de alto nivel'
