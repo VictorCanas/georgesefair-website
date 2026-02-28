@@ -17,7 +17,7 @@ export default function Navbar() {
 
   const navLinks = [
     { name: 'INICIO', path: '/' },
-    { name: 'DR. GEORGE', path: '/dr-george' },
+    { name: 'DR. GEORGES', path: '/dr-george' },
     { name: 'KINGDOM BUILDERS', path: '/kingdom-builders' },
     { name: 'EVENTOS', path: '/eventos' }
   ];
