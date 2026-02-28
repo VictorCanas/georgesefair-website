@@ -30,8 +30,8 @@ function Hero() {
 
       <div className="relative z-[2] w-full max-w-[1400px] px-10 py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          {/* Text Content - Left Side */}
-          <div className="text-left max-lg:text-center">
+          {/* Text Content - Left Side on Desktop, Top on Mobile */}
+          <div className="text-left max-lg:text-center lg:order-1 order-1">
             <div
               className="inline-flex items-center gap-2 font-[600] text-[11px] tracking-[4px] gold-gradient-text uppercase mb-10 opacity-0"
               style={{ animation: 'fadeUp 0.8s ease-out 0.8s both' }}
@@ -46,6 +46,36 @@ function Hero() {
             >
               Construye lo que <span className="gold-gradient-text">permanece.</span>
             </h1>
+
+            {/* Image - Mobile Only (After Title) */}
+            <div className="relative opacity-0 max-w-[200px] mx-auto mb-8 lg:hidden" style={{ animation: 'fadeUp 0.8s ease-out 1.1s both' }}>
+              {/* Golden decorative corner elements */}
+              <div className="absolute -top-2 -left-2 w-6 h-6 border-t-2 border-l-2 border-[#C9A961]" />
+              <div className="absolute -top-2 -right-2 w-6 h-6 border-t-2 border-r-2 border-[#C9A961]" />
+              <div className="absolute -bottom-2 -left-2 w-6 h-6 border-b-2 border-l-2 border-[#C9A961]" />
+              <div className="absolute -bottom-2 -right-2 w-6 h-6 border-b-2 border-r-2 border-[#C9A961]" />
+
+              {/* Golden frame */}
+              <div className="relative p-1.5 bg-gradient-to-br from-[#C9A961] via-[#E0BA4B] to-[#8B7355] rounded-lg shadow-[0_0_30px_rgba(201,169,97,0.3)]">
+                <div className="relative overflow-hidden rounded-md">
+                  {/* Image with black and white filter and gradient blend */}
+                  <img
+                    src="/_AFV3530.JPG"
+                    alt="Dr. Georges Sefair"
+                    className="w-full h-auto object-cover grayscale"
+                    style={{
+                      maskImage: 'linear-gradient(to left, rgba(0,0,0,0.4) 0%, rgba(0,0,0,1) 30%)',
+                      WebkitMaskImage: 'linear-gradient(to left, rgba(0,0,0,0.4) 0%, rgba(0,0,0,1) 30%)'
+                    }}
+                  />
+                  {/* Overlay gradient to blend with background */}
+                  <div className="absolute inset-0 bg-gradient-to-l from-[#1a1a1a] via-transparent to-transparent opacity-60" />
+                  {/* Subtle gold overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-[rgba(201,169,97,0.1)] to-transparent" />
+                </div>
+              </div>
+            </div>
+
             <p
               className="text-[clamp(18px,2vw,22px)] text-[rgba(255,255,255,0.75)] leading-[1.6] mb-12 opacity-0"
               style={{ animation: 'fadeUp 0.8s ease-out 1.3s both' }}
@@ -71,8 +101,8 @@ function Hero() {
             </div>
           </div>
 
-          {/* Image - Right Side */}
-          <div className="relative opacity-0 max-w-[300px] mx-auto" style={{ animation: 'fadeUp 0.8s ease-out 1.2s both' }}>
+          {/* Image - Desktop Only (Right Side) */}
+          <div className="relative opacity-0 max-w-[300px] mx-auto hidden lg:block lg:order-2" style={{ animation: 'fadeUp 0.8s ease-out 1.2s both' }}>
             {/* Golden decorative corner elements */}
             <div className="absolute -top-3 -left-3 w-10 h-10 border-t-2 border-l-2 border-[#C9A961]" />
             <div className="absolute -top-3 -right-3 w-10 h-10 border-t-2 border-r-2 border-[#C9A961]" />
