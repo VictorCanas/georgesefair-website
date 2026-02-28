@@ -25,7 +25,7 @@ export default function Footer() {
         <div>
           <h4 className="font-[700] text-[12px] tracking-[2px] gold-gradient-text uppercase mb-5">Navegación</h4>
           <Link to="/" className="block text-[14px] text-[rgba(255,255,255,0.45)] no-underline mb-3 transition-colors duration-300 hover:text-white">Inicio</Link>
-          <Link to="/dr-george" className="block text-[14px] text-[rgba(255,255,255,0.45)] no-underline mb-3 transition-colors duration-300 hover:text-white">Dr. Georges</Link>
+          <Link to="/dr-george" className="block text-[14px] text-[rgba(255,255,255,0.45)] no-underline mb-3 transition-colors duration-300 hover:text-white">Dr. George</Link>
           <Link to="/kingdom-builders" className="block text-[14px] text-[rgba(255,255,255,0.45)] no-underline mb-3 transition-colors duration-300 hover:text-white">Kingdom Builders</Link>
           <Link to="/eventos" className="block text-[14px] text-[rgba(255,255,255,0.45)] no-underline mb-3 transition-colors duration-300 hover:text-white">Eventos</Link>
         </div>

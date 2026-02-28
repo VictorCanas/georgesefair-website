@@ -20,11 +20,11 @@ function HeroSection() {
       <div className="max-w-[1100px] mx-auto grid grid-cols-1 lg:grid-cols-[450px_1fr] gap-20 items-center relative z-[1]">
         <div className="relative">
           <div className="w-full aspect-[3/4] bg-gradient-to-br from-[#E8DCC8] to-[#d4c5a8] rounded-lg flex items-center justify-center relative after:content-[''] after:absolute after:-top-6 after:-left-6 after:w-full after:h-full after:border-2 after:border-[#e0ba4b] after:rounded-lg after:opacity-[0.15] after:z-0">
-            <span className="font-[600] text-[14px] text-[#8B7355] opacity-50">Dr. Georgess</span>
+            <span className="font-[600] text-[14px] text-[#8B7355] opacity-50">Dr. George Sefair</span>
           </div>
         </div>
         <div>
-          <p className="font-[700] text-[11px] tracking-[4px] gold-gradient-text uppercase mb-6">Dr. Georgess</p>
+          <p className="font-[700] text-[11px] tracking-[4px] gold-gradient-text uppercase mb-6">Dr. George Sefair</p>
           <h1 className="font-[900] text-[clamp(36px,5vw,64px)] text-white leading-[1.1] mb-8">
             Del colapso a la<br />
             <span className="gold-gradient-text">reconstrucción integral</span>
