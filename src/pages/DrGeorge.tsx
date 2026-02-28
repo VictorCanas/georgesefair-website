@@ -19,7 +19,7 @@ function HeroSection() {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(224,186,75,0.08)_0%,transparent_70%)]" />
       <div className="max-w-[1100px] mx-auto grid grid-cols-1 lg:grid-cols-[450px_1fr] gap-20 items-center relative z-[1]">
         <div className="relative">
-          <div className="w-full aspect-[3/4] bg-gradient-to-br from-[#E8DCC8] to-[#d4c5a8] rounded-[20px] flex items-center justify-center relative">
+          <div className="w-full aspect-[3/4] bg-gradient-to-br from-[#E8DCC8] to-[#d4c5a8] rounded-lg flex items-center justify-center relative after:content-[''] after:absolute after:-top-6 after:-left-6 after:w-full after:h-full after:border-2 after:border-[#e0ba4b] after:rounded-lg after:opacity-[0.15] after:z-0">
             <span className="font-[600] text-[14px] text-[#8B7355] opacity-50">Dr. George Sefair</span>
           </div>
         </div>
