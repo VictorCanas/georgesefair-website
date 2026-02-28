@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="bg-[#1a1a1a] border-t border-[rgba(201,169,97,0.1)] py-[60px] px-[60px] pb-10">
       <div className="max-w-[1100px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr] gap-[60px] mb-12">
         <div>
-          <img src="/GEORGES_SEFAIR.png" alt="Kingdom Builders" className="h-[32px] mb-4" />
+          <img src="/GEORGES_SEFAIR.png" alt="Kingdom Builders" className="h-[48px] mb-4" />
           <p className="text-[14px] text-[rgba(255,255,255,0.4)] leading-[1.6] mb-5">
             Existimos para romper los ciclos de pobreza y activar una generación de líderes
             hacia la abundancia, influencia y legado.
