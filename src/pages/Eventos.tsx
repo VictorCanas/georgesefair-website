@@ -31,7 +31,7 @@ function EventosGrid() {
       nombre: 'Kingdom Builders Tour 2026',
       fecha: 'Marzo — Abril 2026',
       ubicaciones: ['Colombia', 'México', 'USA', 'España'],
-      descripcion: 'Eventos presenciales en 4 países de Iberoamérica y Estados Unidos. Experiencias de inmersión de un día completo con el Dr. George Sefair.',
+      descripcion: 'Eventos presenciales en 4 países de Iberoamérica y Estados Unidos. Experiencias de inmersión de un día completo con el Dr. Georges Sefair.',
       detalles: [
         'Sesiones magistrales sobre los 4 pilares',
         'Talleres prácticos de implementación',

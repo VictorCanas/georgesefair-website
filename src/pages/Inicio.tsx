@@ -37,7 +37,7 @@ function Hero() {
               style={{ animation: 'fadeUp 0.8s ease-out 0.8s both' }}
             >
               <span className="w-[30px] h-px gold-gradient opacity-50" />
-              Dr. George Sefair
+              Dr. Georges Sefair
               <span className="w-[30px] h-px gold-gradient opacity-50" />
             </div>
             <h1
@@ -85,7 +85,7 @@ function Hero() {
                 {/* Image with black and white filter and gradient blend */}
                 <img
                   src="/_AFV3530.JPG"
-                  alt="Dr. George Sefair"
+                  alt="Dr. Georges Sefair"
                   className="w-full h-auto object-cover grayscale"
                   style={{
                     maskImage: 'linear-gradient(to left, rgba(0,0,0,0.4) 0%, rgba(0,0,0,1) 30%)',

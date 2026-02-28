@@ -22,13 +22,13 @@ function HeroSection() {
           <div className="w-full aspect-[3/4] rounded-lg flex items-center justify-center relative after:content-[''] after:absolute after:-top-6 after:-left-6 after:w-full after:h-full after:border-2 after:border-[#e0ba4b] after:rounded-lg after:opacity-[0.15] after:z-0 overflow-hidden">
             <img
               src="/_AFV3530.JPG"
-              alt="Dr. George Sefair"
+              alt="Dr. Georges Sefair"
               className="w-full h-full object-cover"
             />
           </div>
         </div>
         <div>
-          <p className="font-[700] text-[11px] tracking-[4px] gold-gradient-text uppercase mb-6">Dr. George Sefair</p>
+          <p className="font-[700] text-[11px] tracking-[4px] gold-gradient-text uppercase mb-6">Dr. Georges Sefair</p>
           <h1 className="font-[900] text-[clamp(36px,5vw,64px)] text-white leading-[1.1] mb-8">
             Del colapso a la<br />
             <span className="gold-gradient-text">reconstrucción integral</span>
