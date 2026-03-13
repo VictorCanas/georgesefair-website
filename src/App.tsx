@@ -5,6 +5,7 @@ import Inicio from './pages/Inicio';
 import DrGeorge from './pages/DrGeorge';
 import KingdomBuilders from './pages/KingdomBuilders';
 import Eventos from './pages/Eventos';
+import TheKingdomMethod from './pages/TheKingdomMethod';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Inicio />} />
           <Route path="/dr-george" element={<DrGeorge />} />
+          <Route path="/the-kingdom-method" element={<TheKingdomMethod />} />
           <Route path="/kingdom-builders" element={<KingdomBuilders />} />
           <Route path="/eventos" element={<Eventos />} />
         </Routes>

@@ -173,13 +173,13 @@ function QueIncluye() {
       beneficio: 'Transformación continua y acompañamiento constante.'
     },
     {
-      tag: 'Formación',
+      tag: 'Acelerador Empresarial',
       nombre: 'Cursos de Alto Valor',
       descripcion: '3 cursos intensivos por año sobre mentalidad de abundancia, fe aplicada a los negocios, y estrategia empresarial. Formato grabado con acceso inmediato.',
       beneficio: 'Conocimiento estructurado y aplicable de inmediato.'
     },
     {
-      tag: 'Coaching',
+      tag: 'Mentoría 1:1',
       nombre: 'Mentoría Individual',
       descripcion: 'Acompañamiento personalizado 1:1 o para equipos de liderazgo. Programa de 52 tópicos anuales con el Dr. Sefair y coaches certificados.',
       beneficio: 'Transformación personalizada y resultados acelerados.'

@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom';
+import { Play } from 'lucide-react';
 
 export default function Inicio() {
   return (
     <div className="min-h-screen">
       <Hero />
+      <WelcomeVideo />
       <ElQuiebre />
       <Framework />
       <KingdomBuildersIntro />
@@ -146,6 +148,34 @@ function Hero() {
   );
 }
 
+function WelcomeVideo() {
+  return (
+    <section className="py-[140px] px-[60px] bg-[#1a1a1a] relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(224,186,75,0.05)_0%,transparent_70%)]" />
+      <div className="max-w-[1000px] mx-auto relative z-[1]">
+        <div className="text-center mb-12">
+          <h2 className="font-[800] text-[clamp(36px,5vw,56px)] text-white leading-[1.15] mb-4">
+            <span className="gold-gradient-text">Bienvenido</span>
+          </h2>
+        </div>
+
+        <div className="relative w-full max-w-[900px] mx-auto">
+          <div
+            className="relative w-full bg-[rgba(0,0,0,0.4)] rounded-lg overflow-hidden border-2 border-[rgba(224,186,75,0.2)] shadow-[0_0_40px_rgba(201,169,97,0.15)]"
+            style={{ paddingBottom: '56.25%' }}
+          >
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="w-20 h-20 rounded-full gold-gradient flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-110 hover:shadow-[0_8px_30px_rgba(224,186,75,0.5)]">
+                <Play className="w-10 h-10 text-white fill-white ml-1" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function ElQuiebre() {
   return (
     <section className="py-[140px] px-[60px] bg-[#1a1a1a] relative overflow-hidden">
@@ -160,7 +190,7 @@ function ElQuiebre() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           <div className="text-center p-8 bg-[rgba(255,255,255,0.02)] rounded-lg border border-[rgba(255,255,255,0.05)]">
-            <div className="font-[800] text-[48px] gold-gradient-text mb-3">$4M</div>
+            <div className="font-[800] text-[48px] gold-gradient-text mb-3">$4M USD</div>
             <p className="text-[15px] text-[rgba(255,255,255,0.6)] leading-[1.7]">
               Perdidos entre 2019 y 2022. No fue solo dinero. Fue identidad.
             </p>
@@ -181,7 +211,7 @@ function ElQuiebre() {
 
         <div className="max-w-[800px] mx-auto text-center">
           <p className="text-[17px] text-[rgba(255,255,255,0.65)] leading-[1.9] mb-6">
-            Construí imperios empresariales. Hablé en escenarios internacionales. Formé a miles de líderes.
+            Construí imperios empresariales. Hablé en escenarios internacionales. Lideré un acelerador empresarial.
             Pero cuando todo colapsó, descubrí que había construido sobre arena.
           </p>
           <p className="text-[17px] text-[rgba(255,255,255,0.65)] leading-[1.9] mb-6">
@@ -225,14 +255,8 @@ function Framework() {
         <div className="text-center mb-16">
           <p className="font-[700] text-[11px] tracking-[4px] gold-gradient-text uppercase mb-5">El Framework</p>
           <h2 className="font-[800] text-[clamp(32px,4vw,48px)] text-[#1a1a1a] leading-[1.15] mb-6">
-            El Modelo de Construcción Integral
+            The Kingdom Method
           </h2>
-          <p className="text-[18px] text-[#666666] max-w-[700px] mx-auto leading-[1.8]">
-            Tres opciones de nombre para consideración: <br/>
-            <span className="font-[600] gold-gradient-text">The Legacy Framework</span> ·
-            <span className="font-[600] gold-gradient-text"> The Kingdom Method</span> ·
-            <span className="font-[600] gold-gradient-text"> The Alignment System</span>
-          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-0 relative">
@@ -345,7 +369,7 @@ function CTAFinal() {
       <div className="relative z-[1] max-w-[700px] mx-auto">
         <h2 className="font-[900] text-[clamp(36px,5vw,56px)] text-white leading-[1.15] mb-8">
           Construye lo que permanece.<br />
-          <span className="gold-gradient-text">Empieza hoy.</span>
+          <span className="gold-gradient-text">Construye tu Legado hoy.</span>
         </h2>
         <Link
           to="/kingdom-builders"
