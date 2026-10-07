@@ -3,6 +3,8 @@
 Documento de handoff para quien continúe manteniendo **georgesefair.com**.
 Última actualización: 7 de octubre de 2026.
 
+> 🚀 **¿Solo quieres editar la web rápido y sin tecnicismos?** Lee primero **[EMPEZAR-AQUI.md](./EMPEZAR-AQUI.md)** — se hace en 3 pasos con IA. Este documento (HANDOFF) es el detalle técnico completo.
+
 ---
 
 ## 1. Qué es este sitio

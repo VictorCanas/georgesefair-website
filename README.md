@@ -3,6 +3,8 @@
 Marketing site for the Dr. Georges Sefair / Kingdom Builders ecosystem.
 Live at **[georgesefair.com](https://georgesefair.com)**.
 
+> 🚀 **¿Vas a editar la web sin saber programar?** Empieza por **[EMPEZAR-AQUI.md](./EMPEZAR-AQUI.md)** — modifícala en 3 pasos con IA (Claude o ChatGPT).
+>
 > 📖 **Maintaining or taking over this project?** Read **[HANDOFF.md](./HANDOFF.md)** — a full guide (in Spanish) on how to run, edit, and deploy the site.
 
 ## Stack
