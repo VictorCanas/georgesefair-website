@@ -1,20 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --black: #1a1a1a;
-  --gold: #C9A961;
-  --gold-bright: #D4AF37;
-  --white: #FFFFFF;
-  --gray-light: #F5F5F5;
-  --gray-med: #666666;
-  --gray-carbon: #2c2c2c;
-  --bronze: #8B7355;
-  --beige: #E8DCC8;
-  --blue-kingdom: #1C4E80;
+  --color-dark-base:     #1A1A1A;
+  --color-dark-surface:  #242424;
+  --color-dark-muted:    #2E2E2E;
+  --color-gold:          #C9952A;
+  --color-gold-light:    #D4A843;
+  --color-gold-dark:     #A07820;
+  --color-light-base:    #F5F3EE;
+  --color-light-surface: #EEEBE4;
+  --color-text-primary:  #FFFFFF;
+  --color-text-body:     #C8C8C8;
+  --color-text-dark:     #1A1A1A;
+  --color-text-muted:    #6B6B6B;
   --gold-gradient: linear-gradient(135deg, #b4800f, #e0ba4b, #e0ba4b 66%, #b4800f);
 }
 
@@ -24,9 +26,12 @@
 
 .gold-gradient-text {
   background: linear-gradient(135deg, #b4800f, #e0ba4b, #e0ba4b 66%, #b4800f);
+  background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  color: transparent;
+  animation: goldShimmer 6s ease-in-out infinite;
 }
 
 * {
@@ -40,41 +45,56 @@ html {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  color: var(--black);
-  background: var(--white);
+  font-family: 'Inter', 'DM Sans', sans-serif;
+  color: var(--color-text-dark);
+  background: var(--color-light-base);
   overflow-x: hidden;
 }
 
 @keyframes lineGrow {
-  from {
-    height: 0;
-    opacity: 0;
-  }
-  to {
-    height: 120px;
-    opacity: 0.4;
-  }
+  from { height: 0; opacity: 0; }
+  to   { height: 120px; opacity: 0.4; }
 }
 
 @keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes scrollPulse {
-  0%, 100% {
-    opacity: 0.3;
-    transform: scaleY(1);
-  }
-  50% {
-    opacity: 0.7;
-    transform: scaleY(1.2);
+  0%, 100% { opacity: 0.3; transform: scaleY(1); }
+  50%       { opacity: 0.7; transform: scaleY(1.2); }
+}
+
+@keyframes goldShimmer {
+  0%, 100% { background-position: 0% center; }
+  50%       { background-position: 100% center; }
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-6px); }
+}
+
+/* Subtle lift on interactive cards that opt in via .lift */
+.lift {
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+              border-color 0.35s ease;
+}
+.lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .gold-gradient-text { animation: none; }
+  .lift { transition: none; }
+  .lift:hover { transform: none; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
   }
 }

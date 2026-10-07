@@ -1,14 +1,14 @@
-import { Link } from 'react-router-dom';
-import { Crown, Heart, Sparkles, Activity, TrendingUp } from 'lucide-react';
+import { Users, GraduationCap, MessagesSquare, CalendarDays, BookOpen, Globe } from 'lucide-react';
+import { CIRCLE_URL, VIDEOS_KINGDOM_BUILDERS } from '../config';
+import { Reveal, Eyebrow, GoldButton } from '../components/ui';
+import DriveVideo from '../components/DriveVideo';
 
 export default function KingdomBuilders() {
   return (
-    <div className="min-h-screen pt-20">
+    <div className="min-h-screen bg-[#141414]">
       <HeroSection />
-      <ElProblema />
-      <LaBrecha />
-      <ElModelo />
       <QueIncluye />
+      <VideoTestimonials />
       <Testimonials />
       <CTAFinal />
     </div>
@@ -17,148 +17,23 @@ export default function KingdomBuilders() {
 
 function HeroSection() {
   return (
-    <section className="py-[140px] px-[60px] bg-[#1a1a1a] relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_80%,rgba(201,169,97,0.08)_0%,transparent_60%),radial-gradient(ellipse_at_80%_20%,rgba(28,78,128,0.06)_0%,transparent_60%)]" />
-      <div className="max-w-[900px] mx-auto text-center relative z-[1]">
-        <p className="font-[700] text-[11px] tracking-[4px] gold-gradient-text uppercase mb-6">El Ecosistema Completo</p>
-        <h1 className="font-[900] text-[clamp(42px,6vw,72px)] text-white leading-[1.05] mb-8">
-          Kingdom <span className="gold-gradient-text">Builders</span>
-        </h1>
-        <p className="text-[clamp(18px,2vw,24px)] text-[rgba(255,255,255,0.75)] leading-[1.7] mb-12">
-          Transformación integral para líderes empresariales que construyen desde la identidad hacia la prosperidad.
-        </p>
-        <a
-          href="#unirse"
-          className="font-[700] text-[16px] tracking-[1px] text-white gold-gradient px-14 py-5 border-none rounded no-underline inline-block transition-all duration-300 hover:scale-105 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(224,186,75,0.5)]"
-        >
-          Unirse a la Comunidad
-        </a>
-      </div>
-    </section>
-  );
-}
-
-function ElProblema() {
-  const problemas = [
-    {
-      titulo: 'Repitiendo los mismos ciclos',
-      descripcion: 'Trabajas más. Ganas más. Pero sientes el mismo vacío. Los resultados no traen la paz que esperabas.'
-    },
-    {
-      titulo: 'Separando fe y negocios',
-      descripcion: 'Los domingos hablas de propósito. Los lunes ejecutas desde la ansiedad. La integración nunca llega.'
-    },
-    {
-      titulo: 'Construyendo sobre arena',
-      descripcion: 'Cada crisis revela que el fundamento no es sólido. Más estrategias no resuelven el problema de raíz.'
-    },
-    {
-      titulo: 'Sin modelo claro',
-      descripcion: 'Tienes pedazos de conocimiento, pero no un sistema integral. Saltas de solución en solución.'
-    }
-  ];
-
-  return (
-    <section className="py-[140px] px-[60px] bg-white">
-      <div className="max-w-[1100px] mx-auto">
-        <div className="text-center mb-20">
-          <p className="font-[700] text-[11px] tracking-[4px] gold-gradient-text uppercase mb-5">El Problema</p>
-          <h2 className="font-[800] text-[clamp(32px,4vw,48px)] text-[#1a1a1a] leading-[1.15] mb-8">
-            La mayoría de empresarios están atrapados<br />
-            en el mismo ciclo
-          </h2>
-          <p className="text-[18px] text-[#666666] max-w-[700px] mx-auto leading-[1.8]">
-            Más esfuerzo. Más estrategias. Más presión. Pero los mismos resultados internos.
-            El problema no es la falta de acción. Es la falta de fundamento.
+    <section className="pt-[180px] pb-[120px] px-[80px] max-md:px-6 bg-[#141414] relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center_top,rgba(201,149,42,0.10)_0%,transparent_60%)]" />
+      <div className="max-w-[920px] mx-auto text-center relative z-[1]">
+        <Reveal>
+          <div className="flex justify-center"><Eyebrow center>El ecosistema</Eyebrow></div>
+          <h1 className="font-display text-[clamp(56px,8vw,112px)] text-white leading-[0.9] uppercase mb-8">
+            Kingdom <span className="gold-gradient-text">Builders</span>
+          </h1>
+          <p className="font-body text-[clamp(17px,2vw,21px)] text-[#C8C8C8] leading-[1.7] mb-6 max-w-[680px] mx-auto">
+            No es una comunidad más. Es un ecosistema completo de transformación para líderes que buscan
+            construir desde la identidad hacia la prosperidad.
           </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {problemas.map((problema, index) => (
-            <div key={index} className="bg-[#F5F5F5] p-8 rounded-lg border-l-4 border-[#e0ba4b]">
-              <h3 className="font-[700] text-[20px] text-[#1a1a1a] mb-4">{problema.titulo}</h3>
-              <p className="text-[16px] text-[#666666] leading-[1.8]">{problema.descripcion}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function LaBrecha() {
-  return (
-    <section className="py-[140px] px-[60px] bg-[#1a1a1a] relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(224,186,75,0.05)_0%,transparent_70%)]" />
-      <div className="max-w-[900px] mx-auto text-center relative z-[1]">
-        <p className="font-[700] text-[11px] tracking-[4px] gold-gradient-text uppercase mb-5">La Brecha</p>
-        <h2 className="font-[800] text-[clamp(32px,4vw,48px)] text-white leading-[1.15] mb-12">
-          Fe sin estructura.<br />
-          Estrategia sin identidad.
-        </h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
-          <div className="bg-[rgba(255,255,255,0.03)] p-8 rounded-lg border border-[rgba(255,255,255,0.05)]">
-            <h3 className="font-[700] text-[22px] gold-gradient-text mb-4">Fe sin estructura</h3>
-            <p className="text-[16px] text-[rgba(255,255,255,0.7)] leading-[1.8]">
-              Muchos empresarios de fe tienen buenas intenciones, pero no un sistema claro.
-              Oran por dirección, pero no ejecutan con excelencia. La fe es real, pero los resultados son inconsistentes.
-            </p>
-          </div>
-
-          <div className="bg-[rgba(255,255,255,0.03)] p-8 rounded-lg border border-[rgba(255,255,255,0.05)]">
-            <h3 className="font-[700] text-[22px] gold-gradient-text mb-4">Estrategia sin identidad</h3>
-            <p className="text-[16px] text-[rgba(255,255,255,0.7)] leading-[1.8]">
-              Otros tienen los sistemas, pero no el fundamento. Ejecutan desde el hacer, no desde el ser.
-              Los resultados llegan, pero la paz no. El éxito externo no trae plenitud interna.
-            </p>
-          </div>
-        </div>
-
-        <div className="mt-12 bg-[rgba(224,186,75,0.05)] p-10 rounded-lg border border-[rgba(224,186,75,0.1)]">
-          <p className="text-[20px] text-white font-[600] leading-[1.7]">
-            Kingdom Builders cierra esa brecha. <span className="gold-gradient-text">Integra identidad, mentalidad, estrategia y prosperidad</span> en un solo ecosistema.
+          <p className="font-label text-[14px] tracking-[0.2em] uppercase text-[rgba(255,255,255,0.6)] mb-12">
+            Comunidad · Formación · Mentoría · Eventos
           </p>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function ElModelo() {
-  const pilares = [
-    { name: 'Identidad', spanish: 'Identity', phrase: 'Quién eres determina lo que construyes', icon: Crown },
-    { name: 'Mentalidad', spanish: 'Mindset', phrase: 'Cómo piensas define tus límites o libertades', icon: Heart },
-    { name: 'Estrategia', spanish: 'Strategy', phrase: 'Qué haces alinea propósito con resultados', icon: Sparkles },
-    { name: 'Prosperidad', spanish: 'Prosperity', phrase: 'Lo que permanece es fruto de lo anterior', icon: TrendingUp }
-  ];
-
-  return (
-    <section className="py-[140px] px-[60px] bg-white">
-      <div className="max-w-[1100px] mx-auto">
-        <div className="text-center mb-20">
-          <p className="font-[700] text-[11px] tracking-[4px] gold-gradient-text uppercase mb-5">El Modelo</p>
-          <h2 className="font-[800] text-[clamp(32px,4vw,48px)] text-[#1a1a1a] leading-[1.15] mb-8">
-            Cuatro pilares. Una transformación.
-          </h2>
-          <p className="text-[18px] text-[#666666] max-w-[700px] mx-auto leading-[1.8]">
-            Kingdom Builders no es un programa aislado. Es un sistema integral que aborda las cuatro áreas
-            críticas para construir lo que permanece.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {pilares.map((pilar) => (
-            <div key={pilar.name} className="bg-white rounded-lg p-10 pb-9 text-center relative border-2 border-[rgba(0,0,0,0.06)] hover:border-[rgba(224,186,75,0.2)] transition-all duration-400">
-              <div className="w-14 h-14 mx-auto mb-5 flex items-center justify-center">
-                <pilar.icon className="w-10 h-10 stroke-[#e0ba4b]" strokeWidth={1.5} />
-              </div>
-              <div className="font-[800] text-[16px] tracking-[2px] text-[#1a1a1a] uppercase mb-2">{pilar.name}</div>
-              <div className="font-[500] text-[12px] gold-gradient-text mb-4">{pilar.spanish}</div>
-              <div className="text-[13px] leading-[1.6] text-[#666666]">{pilar.phrase}</div>
-            </div>
-          ))}
-        </div>
+          <GoldButton href={CIRCLE_URL}>Unirse a la comunidad</GoldButton>
+        </Reveal>
       </div>
     </section>
   );
@@ -166,58 +41,54 @@ function ElModelo() {
 
 function QueIncluye() {
   const componentes = [
-    {
-      tag: 'Comunidad',
-      nombre: 'Kingdom Hub',
-      descripcion: 'Sesiones semanales por Zoom con el Dr. Sefair. Devocional diario. Foro Q&A. Invitados sorpresa mensuales. Tópicos rotativos alineados a los 4 pilares.',
-      beneficio: 'Transformación continua y acompañamiento constante.'
-    },
-    {
-      tag: 'Acelerador Empresarial',
-      nombre: 'Cursos de Alto Valor',
-      descripcion: '3 cursos intensivos por año sobre mentalidad de abundancia, fe aplicada a los negocios, y estrategia empresarial. Formato grabado con acceso inmediato.',
-      beneficio: 'Conocimiento estructurado y aplicable de inmediato.'
-    },
-    {
-      tag: 'Mentoría 1:1',
-      nombre: 'Mentoría Individual',
-      descripcion: 'Acompañamiento personalizado 1:1 o para equipos de liderazgo. Programa de 52 tópicos anuales con el Dr. Sefair y coaches certificados.',
-      beneficio: 'Transformación personalizada y resultados acelerados.'
-    },
-    {
-      tag: 'Eventos',
-      nombre: 'Tour & Retiros',
-      descripcion: 'Eventos presenciales en múltiples países. One Day intensivo anual. Retiro exclusivo de inmersión total. Networking de alto nivel.',
-      beneficio: 'Experiencias transformacionales y conexiones estratégicas.'
-    }
+    { Icon: Users,         titulo: 'Comunidad privada',     descripcion: 'Red de empresarios y líderes construyendo con propósito.' },
+    { Icon: GraduationCap, titulo: 'Formación continua',     descripcion: 'Cursos, módulos y recursos en plataforma propia.' },
+    { Icon: MessagesSquare, titulo: 'Mentoría estratégica',  descripcion: 'Acompañamiento cercano con el Dr. G y su equipo.' },
+    { Icon: CalendarDays,  titulo: 'Eventos presenciales',   descripcion: 'Encuentros exclusivos y experiencias por ciudad.' },
+    { Icon: BookOpen,      titulo: 'Biblioteca de recursos', descripcion: 'Guías, devocionales y workbooks descargables.' },
+    { Icon: Globe,         titulo: 'Red latinoamericana',    descripcion: 'Conexión con líderes en toda Iberoamérica.' },
   ];
-
   return (
-    <section className="py-[140px] px-[60px] bg-[#F5F5F5]">
-      <div className="max-w-[1100px] mx-auto">
-        <div className="text-center mb-20">
-          <p className="font-[700] text-[11px] tracking-[4px] gold-gradient-text uppercase mb-5">Qué Incluye</p>
-          <h2 className="font-[800] text-[clamp(32px,4vw,48px)] text-[#1a1a1a] leading-[1.15] mb-8">
-            Un ecosistema completo de transformación
+    <section className="py-[130px] px-[80px] max-md:px-6 bg-[#F5F3EE]">
+      <div className="max-w-container mx-auto">
+        <Reveal className="text-center mb-16">
+          <div className="flex justify-center"><Eyebrow center>Qué incluye</Eyebrow></div>
+          <h2 className="font-display text-[clamp(40px,5vw,72px)] text-[#1A1A1A] leading-[0.98]">
+            Un ecosistema completo
           </h2>
-        </div>
-
-        <div className="space-y-8">
-          {componentes.map((comp, index) => (
-            <div key={index} className="bg-white p-10 rounded-lg border border-[rgba(0,0,0,0.06)]">
-              <div className="grid grid-cols-1 md:grid-cols-[1fr_300px] gap-8">
-                <div>
-                  <div className="font-[700] text-[11px] tracking-[2px] gold-gradient-text uppercase mb-3">{comp.tag}</div>
-                  <h3 className="font-[800] text-[28px] text-[#1a1a1a] mb-4">{comp.nombre}</h3>
-                  <p className="text-[16px] text-[#666666] leading-[1.8] mb-4">{comp.descripcion}</p>
-                </div>
-                <div className="flex items-center">
-                  <div className="bg-[#F5F5F5] p-6 rounded-lg">
-                    <p className="text-[14px] font-[600] text-[#1a1a1a]">{comp.beneficio}</p>
-                  </div>
-                </div>
+        </Reveal>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {componentes.map(({ Icon, titulo, descripcion }, i) => (
+            <Reveal key={titulo} delay={i * 70}>
+              <div className="bg-[#1C1C1C] p-8 rounded-[16px] h-full min-h-[210px] flex flex-col">
+                <Icon size={30} strokeWidth={1.6} className="text-[#C9952A] mb-6" />
+                <h3 className="font-display text-[26px] text-white leading-none mb-3">{titulo}</h3>
+                <p className="font-body text-[15px] text-[#B8B8B8] leading-[1.6]">{descripcion}</p>
               </div>
-            </div>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function VideoTestimonials() {
+  return (
+    <section className="py-[130px] px-[80px] max-md:px-6 bg-[#141414] relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(201,149,42,0.05)_0%,transparent_70%)]" />
+      <div className="max-w-container mx-auto relative z-[1]">
+        <Reveal className="text-center mb-16">
+          <div className="flex justify-center"><Eyebrow center>En sus propias palabras</Eyebrow></div>
+          <h2 className="font-display text-[clamp(38px,4.6vw,66px)] text-white leading-[1]">
+            Historias reales de transformación
+          </h2>
+        </Reveal>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-7 max-w-[1000px] mx-auto">
+          {VIDEOS_KINGDOM_BUILDERS.map((id, n) => (
+            <Reveal key={id} delay={n * 100}>
+              <DriveVideo id={id} title="Testimonio Kingdom Builders" className="border border-[rgba(201,149,42,0.22)]" />
+            </Reveal>
           ))}
         </div>
       </div>
@@ -227,45 +98,31 @@ function QueIncluye() {
 
 function Testimonials() {
   const testimonials = [
-    {
-      text: 'Kingdom Builders cambió por completo mi forma de ver los negocios. Ya no separo mi fe de mi empresa. Hoy lidero con propósito y mis resultados hablan por sí solos.',
-      author: '[Nombre del Miembro]',
-      role: 'Empresario, Colombia',
-      tag: 'Identidad'
-    },
-    {
-      text: 'El coaching con el Dr. Sefair me ayudó a triplicar mis ingresos en 8 meses. Pero lo más importante fue recuperar la paz y la claridad sobre mi propósito como líder.',
-      author: '[Nombre del Miembro]',
-      role: 'CEO, México',
-      tag: 'Prosperidad'
-    },
-    {
-      text: 'La comunidad se convirtió en mi espacio de crecimiento semanal. Cada sesión me empuja a ser un mejor líder y un mejor ser humano.',
-      author: '[Nombre del Miembro]',
-      role: 'Emprendedora, USA',
-      tag: 'Estrategia'
-    }
+    { text: 'Vivía paralizada por el miedo a vender. Cuando entendí mi identidad en Dios, tomé decisiones con autoridad y empecé a ver resultados reales. Hoy construyo un legado para mi familia.', author: 'Liliana Velasco', tag: 'Identidad' },
+    { text: 'Conocía la Biblia, pero mi mentalidad vivía limitada. En Kingdom Builders descubrí el potencial que Dios puso en mí y empecé a actuar con propósito, visión y seguridad.', author: 'María Carolina Carrillo', tag: 'Mentalidad' },
+    { text: 'Llegué confundida y sin dirección. Aquí entendí quién soy en el Reino y cómo Dios quiere que piense mis finanzas. Hoy camino con enfoque y claridad.', author: 'Carmen Helena Cadena', tag: 'Claridad' },
+    { text: 'Como empleado pensaba que estaba destinado a la escasez. Kingdom Builders me enseñó que la transformación empieza en la mente. Hoy tengo dirección y una mentalidad renovada.', author: 'César David Peñaloza', tag: 'Prosperidad' },
+    { text: 'Creía que cumpliendo mis obligaciones Dios haría todo por mí. Entendí que la fe sin acción es estancamiento. Al cambiar mi estrategia, se abrieron puertas.', author: 'John David Patiño', tag: 'Estrategia' },
   ];
-
   return (
-    <section className="py-[140px] px-[60px] bg-white">
-      <div className="max-w-[1100px] mx-auto">
-        <div className="text-center mb-20">
-          <p className="font-[700] text-[11px] tracking-[4px] gold-gradient-text uppercase mb-5">Transformaciones Reales</p>
-          <h2 className="font-[800] text-[clamp(32px,4vw,48px)] text-[#1a1a1a] leading-[1.15] mb-8">
+    <section className="py-[130px] px-[80px] max-md:px-6 bg-[#EEEBE4]">
+      <div className="max-w-container mx-auto">
+        <Reveal className="text-center mb-16">
+          <div className="flex justify-center"><Eyebrow center>Transformaciones reales</Eyebrow></div>
+          <h2 className="font-display text-[clamp(40px,5vw,72px)] text-[#1A1A1A] leading-[0.98]">
             Lo que dicen los miembros
           </h2>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, i) => (
-            <div key={i} className="bg-[#F5F5F5] rounded-lg p-10 px-8 relative before:content-['\u201C'] before:font-[Poppins] before:text-[60px] before:gold-gradient-text before:opacity-30 before:absolute before:top-4 before:left-7 before:leading-none">
-              <p className="text-[15px] leading-[1.8] text-[#666666] italic mb-6 relative z-[1]">{testimonial.text}</p>
-              <div className="font-[700] text-[14px] text-[#1a1a1a]">{testimonial.author}</div>
-              <div className="text-[12px] gold-gradient-text mt-0.5">{testimonial.role}</div>
-              <div className="inline-block mt-3 font-[600] text-[10px] tracking-[1px] text-[#8B7355] bg-[rgba(139,115,85,0.08)] px-2.5 py-1 rounded-[3px] uppercase">
-                {testimonial.tag}
+        </Reveal>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {testimonials.map((t, i) => (
+            <Reveal key={t.author} delay={(i % 3) * 90}>
+              <div className="bg-[#F5F3EE] rounded-[16px] p-8 h-full flex flex-col">
+                <span className="font-display text-[48px] leading-[0.5] text-[#C9952A] select-none">“</span>
+                <p className="font-body text-[16px] leading-[1.65] text-[#1A1A1A] mt-4 mb-6 flex-1">{t.text}</p>
+                <div className="font-heading font-[700] text-[15px] text-[#1A1A1A]">{t.author}</div>
+                <span className="inline-block w-fit mt-3 font-label font-[600] text-[11px] tracking-[0.14em] uppercase text-[#A07820] border border-[rgba(201,149,42,0.5)] rounded-full px-4 py-1.5">{t.tag}</span>
               </div>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>
@@ -275,25 +132,19 @@ function Testimonials() {
 
 function CTAFinal() {
   return (
-    <section id="unirse" className="py-[160px] px-[60px] bg-[#1a1a1a] text-center relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center_bottom,rgba(224,186,75,0.08)_0%,transparent_60%)]" />
-      <div className="relative z-[1] max-w-[800px] mx-auto">
-        <h2 className="font-[900] text-[clamp(36px,5vw,56px)] text-white leading-[1.15] mb-8">
-          Construye lo que permanece.<br />
-          <span className="gold-gradient-text">Empieza hoy.</span>
-        </h2>
-        <p className="text-[18px] text-[rgba(255,255,255,0.6)] leading-[1.8] mb-12">
-          Únete a Kingdom Builders y accede al ecosistema completo: Comunidad, Formación, Coaching y Eventos.
-        </p>
-        <a
-          href="mailto:brand@kingdombuilders.com?subject=Quiero unirme a Kingdom Builders"
-          className="font-[700] text-[16px] tracking-[1px] text-white gold-gradient px-14 py-5 border-none rounded no-underline inline-block transition-all duration-300 hover:scale-105 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(224,186,75,0.5)]"
-        >
-          Unirse a la Comunidad
-        </a>
-        <p className="text-[14px] text-[rgba(255,255,255,0.4)] mt-8">
-          ¿Preguntas? Escríbenos a brand@kingdombuilders.com
-        </p>
+    <section className="py-[140px] px-[80px] max-md:px-6 bg-[#141414] text-center relative overflow-hidden">
+      <div className="absolute inset-x-0 bottom-0 h-[60%] bg-[radial-gradient(ellipse_at_center_bottom,rgba(201,149,42,0.14)_0%,transparent_65%)]" />
+      <div className="relative z-[1] max-w-[820px] mx-auto">
+        <Reveal>
+          <h2 className="font-display text-[clamp(42px,5.4vw,80px)] text-white leading-[0.95] uppercase mb-7">
+            Construye lo que permanece, <span className="gold-gradient-text">en comunidad.</span>
+          </h2>
+          <p className="font-body text-[18px] text-[#C8C8C8] leading-[1.7] mb-10 max-w-[600px] mx-auto">
+            Comunidad, formación, mentoría y eventos — todo diseñado para que construyas desde la identidad
+            hacia la prosperidad.
+          </p>
+          <GoldButton href={CIRCLE_URL}>Unirse a la comunidad</GoldButton>
+        </Reveal>
       </div>
     </section>
   );
