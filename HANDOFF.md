@@ -162,7 +162,7 @@ Hay dos formas. **La opción A es la recomendada** una vez conectado GitHub.
 
 ### Opción A — Automático con GitHub (recomendada)
 
-Si el proyecto de Vercel está conectado al repo de GitHub, **cada vez que subes cambios a la rama `main`, Vercel publica solo**:
+Una vez conectado (ver abajo), **cada vez que subes cambios a la rama `main`, Vercel publica solo**:
 
 ```bash
 git add .
@@ -172,7 +172,18 @@ git push
 
 En ~1 minuto el cambio está en georgesefair.com. Puedes ver el progreso en el panel de Vercel.
 
-> ⚠️ Nota: al momento de esta entrega, la conexión automática con GitHub **no estaba activada**. Para activarla: panel de Vercel → proyecto `georgesefair-website` → **Settings → Git → Connect Git Repository**. Mientras tanto, usa la Opción B.
+#### Cómo conectar GitHub con Vercel (se hace una sola vez, desde el navegador)
+
+Esta conexión **no se puede hacer por terminal**: requiere autorizar la app de Vercel en GitHub, que es un paso de permisos en el navegador. Pasos:
+
+1. Entra a https://vercel.com y abre el proyecto **`georgesefair-website`**.
+2. Ve a **Settings → Git**.
+3. Clic en **Connect Git Repository** → elige **GitHub**.
+4. Si es la primera vez, GitHub pedirá **instalar/autorizar la app "Vercel"**. Al instalarla, da acceso a `VictorCanas/georgesefair-website` (o a "All repositories").
+5. Selecciona el repo `VictorCanas/georgesefair-website` y confirma.
+6. Listo. Desde ahora, cada `git push` a `main` publica automáticamente. (Además, cada rama o Pull Request genera una "Preview" con su propia URL para revisar antes de publicar.)
+
+> Mientras no esté conectado, usa la **Opción B** para publicar.
 
 ### Opción B — Manual con la CLI de Vercel
 
@@ -209,7 +220,7 @@ Para mantener el sitio, quien lo reciba necesitará acceso a:
 
 | Servicio | Para qué | Cómo se comparte |
 |---|---|---|
-| **GitHub** (repo) | Editar y versionar el código | Invitación como colaborador al repo |
+| **GitHub** (repo) | Clonar y editar el código | El repo es **público**: cualquiera puede clonarlo. Para subir cambios directo a `main` se necesita ser colaborador; si no, se contribuye por *fork* + Pull Request. |
 | **Vercel** | Publicar el sitio y ver el dominio | Invitar al equipo/proyecto en Vercel |
 | **GoDaddy** | Dominio georgesefair.com (DNS) | Compartir acceso de la cuenta GoDaddy |
 | **Google Drive** | Videos testimoniales | Que los videos estén en "Cualquiera con el enlace" |
@@ -219,7 +230,49 @@ Para mantener el sitio, quien lo reciba necesitará acceso a:
 
 ---
 
-## 9. Contacto
+## 9. Hacer modificaciones con IA (Claude Code o ChatGPT)
+
+La forma más fácil de seguir editando este sitio **sin saber programar** es usar un asistente de IA que trabaje directamente sobre los archivos del proyecto. Le describes el cambio en español y él lo hace.
+
+### Opción recomendada: Claude Code (lo que se usó para construir este sitio)
+
+**Instalación (una sola vez):**
+1. Descarga la app de Claude en https://claude.ai/download (o instala la versión de terminal con `npm i -g @anthropic-ai/claude-code`).
+2. Abre Claude Code y ábrele la carpeta del proyecto `georgesefair-website`.
+
+**Para hacer un cambio:**
+1. Asegúrate de tener el código actualizado: en la terminal del proyecto corre `git pull`.
+2. Escríbele el cambio en lenguaje normal. Ejemplos de prompts que puedes copiar:
+   - *"Cambia el precio del curso Reset Mental a $97 USD en el Acceso General y $197 en el VIP."*
+   - *"En la página de inicio, cambia el subtítulo del hero a 'Fe aplicada. Resultados reales.'"*
+   - *"Reemplaza los 2 videos de Kingdom Builders por estos nuevos enlaces de Google Drive: [pega los enlaces]."*
+   - *"Agrega un nuevo testimonio de texto en Kingdom Builders de 'Juan Pérez' que diga: '…'."*
+   - *"Corre /ui-check para revisar que todo se vea bien antes de publicar."*
+3. Pídele que lo previsualice: *"Muéstrame cómo quedó en el navegador."*
+4. Cuando estés conforme, pídele publicar: *"Publica los cambios a producción."* (hará `git push` o `vercel --prod`).
+
+> 💡 Este proyecto ya incluye instrucciones para la IA: el archivo **`.claude/`** trae la skill `ui-check` (revisión visual automática). Solo escribe `/ui-check` o "revisa la UI".
+
+### Alternativa: ChatGPT
+
+ChatGPT funciona, pero es menos directo porque no edita los archivos por sí solo (a menos que uses ChatGPT con acceso a tu computadora / Codex).
+
+Flujo manual con ChatGPT normal:
+1. Abre el archivo que quieres cambiar (ej. `src/pages/Inicio.tsx`) y copia su contenido.
+2. Pégalo en ChatGPT con una instrucción: *"Este es un componente de React. Cambia [lo que sea] y devuélveme el archivo completo."*
+3. Copia la respuesta y pégala de vuelta en el archivo, reemplazando todo.
+4. Guarda, revisa con `npm run dev`, y publica (sección 6).
+
+### Reglas de oro al usar IA
+
+- **Siempre haz `git pull` antes de empezar** y `git push` al terminar, para no perder cambios.
+- Pídele **un cambio a la vez** y revisa el resultado antes del siguiente.
+- Antes de publicar, pídele correr `npm run build` para confirmar que no hay errores.
+- Si algo sale mal, siempre se puede volver atrás: *"Revierte el último cambio"* o `git revert`.
+
+---
+
+## 10. Contacto
 
 Proyecto desarrollado inicialmente por Víctor Canas (victor@multigle.com).
 Para dudas sobre la estructura del código, revisar primero este documento y los comentarios dentro de `src/config.ts`.
